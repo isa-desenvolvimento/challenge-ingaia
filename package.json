@@ -31,7 +31,6 @@
   },
   "lint-staged": {
     "src/*+/*": [
-      "prettier --write",
       "yarn lint --fix",
       "git add ."
     ]
