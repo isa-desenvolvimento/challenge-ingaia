@@ -30,7 +30,7 @@
     "typescript": "^4.2.4"
   },
   "lint-staged": {
-    "*.ts{,x}": [
+    "*.ts{x}": [
       "prettier --write",
       "yarn lint --fix",
       "git add ."
