@@ -1,3 +1,6 @@
+import { useTranslationContext } from 'locales/translationContext'
+
 export default function NotFound() {
-  return <div>Opps... página não encontrada</div>
+  const translation = useTranslationContext()
+  return <div>{translation.NOT_FOUND}</div>
 }
