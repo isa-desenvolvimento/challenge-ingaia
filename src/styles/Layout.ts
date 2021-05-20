@@ -8,6 +8,7 @@ export const Container = styled.main`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
   background-color: rgb(15, 15, 15);
+
+  overflow: scroll;
 `

@@ -3,6 +3,9 @@ module.exports = {
     locales: ['pt-BR', 'en-US'],
     defaultLocale: 'pt-BR'
   },
-  basePath: '/challenge-ingaia',
-  assetPrefix: '/challenge-ingaia/'
+  // basePath: '/challenge-ingaia',
+  // assetPrefix: '/challenge-ingaia/',
+  images: {
+    domains: ['rickandmortyapi.com']
+  }
 }

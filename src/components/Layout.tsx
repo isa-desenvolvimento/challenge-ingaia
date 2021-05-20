@@ -9,7 +9,7 @@ export default function Layout({ children }: ChildrenProps) {
     <TranslationProvider>
       <S.Container>
         <Nav />
-        <main>{children}</main>
+        {children}
       </S.Container>
     </TranslationProvider>
   )

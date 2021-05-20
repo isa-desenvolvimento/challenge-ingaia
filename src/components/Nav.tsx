@@ -21,7 +21,7 @@ const Nav = () => {
     e.preventDefault()
 
     if (e.target[0].form[0].value)
-      router.push(`/items/${e.target[0].form[0].value}`)
+      router.push(`/characters/${e.target[0].form[0].value}`)
   }
 
   return (

@@ -23,6 +23,10 @@ const GlobalStyles = createGlobalStyle`
     color: inherit;
     text-decoration: none;
   }
+
+  button, a {
+    cursor: pointer;
+  }
 `
 
 export default GlobalStyles
