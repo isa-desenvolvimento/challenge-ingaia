@@ -1,6 +1,5 @@
-import { useTranslationContext } from 'locales/translationContext'
+import NotFoundItem from 'components/NotFoundItem'
 
 export default function NotFound() {
-  const translation = useTranslationContext()
-  return <div>{translation.NOT_FOUND}</div>
+  return <NotFoundItem />
 }

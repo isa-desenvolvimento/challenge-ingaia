@@ -4,6 +4,7 @@ import * as S from 'styles/Card'
 import Item from 'components/Item'
 import client from 'pages/api/apollo-client'
 import { gql } from '@apollo/client'
+import NotFoundItem from 'components/NotFoundItem'
 
 type ItemsProps = {
   name: string
@@ -17,17 +18,16 @@ type CharactersProps = {
 }
 
 export default function List({ characters }: CharactersProps) {
-  // if (error) return <div>Error loading players.</div>
+  if (!characters.length) return <NotFoundItem />
   // if (loading) return <div>Loading</div>
 
   return (
     <S.Card>
-      {characters &&
-        characters.map((character, index) => (
-          <Link href={`/api/character/${index}`} key={index}>
-            <Item {...character} />
-          </Link>
-        ))}
+      {characters.map((character, index) => (
+        <Link href={`/api/character/${index}`} key={index}>
+          <Item {...character} />
+        </Link>
+      ))}
     </S.Card>
   )
 }
