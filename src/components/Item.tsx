@@ -6,18 +6,27 @@ type ItemsProps = {
   image: string
   species: string
   status: string
+  width?: string
+  height?: string
 }
 
-export default function ItemList({ name, species, image, status }: ItemsProps) {
+export default function ItemList({
+  name,
+  species,
+  image,
+  status,
+  width = '283',
+  height = '238'
+}: ItemsProps) {
   const translation = useTranslationContext()
 
   return (
-    <S.Container>
+    <S.Container height={height} width={width}>
       <S.ImageContainer
         src={image}
         alt={`${translation.IMAGE_EPISODE} ${name}`}
-        width="283"
-        height="283"
+        width={width}
+        height={height}
         objectFit="cover"
         title={status}
       />

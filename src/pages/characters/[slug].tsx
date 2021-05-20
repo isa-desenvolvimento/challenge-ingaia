@@ -5,7 +5,7 @@ import Item from 'components/Item'
 import client from 'pages/api/apollo-client'
 import { gql } from '@apollo/client'
 import NotFoundItem from 'components/NotFoundItem'
-
+import Details from 'components/Details'
 type ItemsProps = {
   name: string
   image: string
@@ -22,13 +22,14 @@ export default function List({ characters }: CharactersProps) {
   // if (loading) return <div>Loading</div>
 
   return (
-    <S.Card>
-      {characters.map((character, index) => (
-        <Link href={`/api/character/${index}`} key={index}>
-          <Item {...character} />
-        </Link>
-      ))}
-    </S.Card>
+    // <S.Card>
+    //   {characters.map((character, index) => (
+    //     <Link href={`/api/character/${index}`} key={index}>
+    //       <Item {...character} />
+    //     </Link>
+    //   ))}
+    // </S.Card>
+    <Details item={characters[0]} />
   )
 }
 

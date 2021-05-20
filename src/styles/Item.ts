@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 export const Container = styled.div`
-  height: 223px;
-  width: 223px;
+  height: ${({ height }) => `${height}px`};
+  width: ${({ width }) => `${width}px`};
   position: relative;
   border-radius: 8px;
 
