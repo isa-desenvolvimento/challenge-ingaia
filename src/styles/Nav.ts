@@ -19,15 +19,16 @@ export const Input = styled.input`
   padding-inline-start: 10px;
   border-radius: 5px;
   height: 100%;
+  padding: 1.8rem;
 `
 
-export const Button = styled.button`
-  margin-left: 15px;
-  width: 5em;
-  height: 100%;
-  color: white;
-  border-color: rgba(255, 255, 255, 0.664);
-  background-color: transparent;
-  border-radius: 5px;
-  transition-duration: 0.4s;
-`
+// export const Button = styled.button`
+//   margin-left: 15px;
+//   width: 5em;
+//   height: 100%;
+//   color: white;
+//   border-color: rgba(255, 255, 255, 0.664);
+//   background-color: transparent;
+//   border-radius: 5px;
+//   transition-duration: 0.4s;
+// `

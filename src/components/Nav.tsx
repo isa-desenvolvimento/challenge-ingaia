@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { useState } from 'react'
 import { useTranslationContext } from 'locales/translationContext'
+import Button from 'components/Button'
 
 const Nav = () => {
   const [search, setSearch] = useState('')
@@ -35,9 +36,11 @@ const Nav = () => {
             value={search}
             onChange={(e) => searchEvt(e)}
           />
-          <S.Button disabled={search === ''} type="submit">
-            {translation.SEARCH}
-          </S.Button>
+          <Button
+            disabled={search === ''}
+            type="submit"
+            text={translation.SEARCH}
+          />
         </S.InputContainer>
       </form>
     </S.Container>

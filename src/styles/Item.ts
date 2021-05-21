@@ -2,10 +2,9 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 export const Container = styled.div`
-  height: ${({ height }) => `${height}px`};
-  width: ${({ width }) => `${width}px`};
   position: relative;
   border-radius: 8px;
+  max-width: 340px;
 
   &:hover {
     border: 2px solid rgba(251, 255, 5, 0.794);
@@ -13,11 +12,23 @@ export const Container = styled.div`
 
   img {
     border-radius: 8px;
+    max-width: 500px !important;
+    max-height: 500px !important;
+
+    @media (max-width: 800px) {
+      height: 150px !important;
+      width: 150px !important;
+    }
+  }
+
+  @media (max-width: 800px) {
+    min-width: 150px !important;
+    min-height: 150px !important;
   }
 `
 export const ImageContainer = styled(Image)`
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   border-radius: inherit;
   filter: ${({ title }) => (title === 'Dead' ? 'grayscale(1)' : 'none')};
 `
@@ -31,4 +42,5 @@ export const Description = styled.div`
   padding: 1rem;
   border-bottom-right-radius: inherit;
   border-bottom-left-radius: inherit;
+  max-width: 339px;
 `

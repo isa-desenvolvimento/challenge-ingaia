@@ -5,31 +5,20 @@ import Item from 'components/Item'
 import client from 'pages/api/apollo-client'
 import { gql } from '@apollo/client'
 import NotFoundItem from 'components/NotFoundItem'
-import Details from 'components/Details'
-type ItemsProps = {
-  name: string
-  image: string
-  species: string
-  status: string
-}
-
-type CharactersProps = {
-  characters: Array<ItemsProps>
-}
+import { CharactersProps } from 'types/components'
 
 export default function List({ characters }: CharactersProps) {
   if (!characters.length) return <NotFoundItem />
   // if (loading) return <div>Loading</div>
 
   return (
-    // <S.Card>
-    //   {characters.map((character, index) => (
-    //     <Link href={`/api/character/${index}`} key={index}>
-    //       <Item {...character} />
-    //     </Link>
-    //   ))}
-    // </S.Card>
-    <Details item={characters[0]} />
+    <S.Card>
+      {characters.map((character, index) => (
+        <Link href={`/api/character/${index}`} key={index}>
+          <Item {...character} />
+        </Link>
+      ))}
+    </S.Card>
   )
 }
 

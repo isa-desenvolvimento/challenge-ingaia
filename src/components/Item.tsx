@@ -21,7 +21,7 @@ export default function ItemList({
   const translation = useTranslationContext()
 
   return (
-    <S.Container height={height} width={width}>
+    <S.Container>
       <S.ImageContainer
         src={image}
         alt={`${translation.IMAGE_EPISODE} ${name}`}

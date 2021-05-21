@@ -1,32 +1,120 @@
 import styled from 'styled-components'
 
-export const StyledModalBody = styled.div`
-  padding-top: 10px;
-`
-
-export const StyledModalHeader = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  font-size: 25px;
-`
-
-export const StyledModal = styled.div`
-  background: white;
-  width: 500px;
-  height: 600px;
-  border-radius: 15px;
-  padding: 15px;
-`
-export const StyledModalOverlay = styled.div`
+export const Modal = styled.div`
+  background: #00000080;
   position: absolute;
   top: 0;
-  left: 0;
+  bottom: 0;
   width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  overflow: hidden;
 `
 
-export const StyledModalTitle = styled.h1``
+export const Container = styled.div`
+  position: relative;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  margin: 5% auto;
+  box-shadow: inset 0 0 1em #00000080, 0 0 1em #00000080;
+  border-radius: 8px;
+
+  @media (max-width: 800px) {
+    /* position: relative;
+    width: 80%;
+    height: 80%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    box-shadow: inset 0 0 1em #00000080, 0 0 1em #00000080;
+    border-radius: 8px; */
+    margin-top: 30%;
+    display: list-item;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    box-shadow: inset 0 0 1em #00000080, 0 0 1em #00000080;
+    border-radius: 8px;
+
+    img {
+      width: 100% !important;
+    }
+  }
+`
+export const Image = styled.div`
+  margin-left: -15%;
+  /* margin-top: 10%; */
+  border-radius: inherit;
+  margin-right: 10%;
+
+  @media (max-width: 800px) {
+    /* margin: 0;
+    width: 80 !important;
+    height: 40 !important;
+
+    text-align: center; */
+
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    position: relative;
+    top: -8rem !important;
+  }
+`
+export const Left = styled.div`
+  backdrop-filter: blur(2rem);
+  width: 35%;
+  /* margin-left: 15%; */
+  height: 100%;
+  background-color: #bdbcbc2e;
+  border-bottom-left-radius: inherit;
+  border-top-left-radius: inherit;
+
+  @media (max-width: 800px) {
+    width: 100%;
+    height: 15%;
+    justify-content: center;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    border-bottom-left-radius: 0;
+  }
+`
+export const Right = styled.div`
+  background: #00000090;
+  width: 65%;
+  height: 100%;
+  border-bottom-right-radius: inherit;
+  border-top-right-radius: inherit;
+
+  @media (max-width: 800px) {
+    width: 100%;
+    height: 80%;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    border-top-right-radius: 0;
+  }
+`
+
+export const TextContainer = styled.div`
+  font-family: 'Nunito';
+  padding: 5rem;
+
+  @media (max-width: 800px) {
+    padding: 3rem;
+  }
+`
+
+export const Title = styled.h2`
+  color: #cbd736;
+  margin-bottom: 1rem;
+`
+
+export const H1 = styled.h1`
+  color: white;
+`
+
+export const Text = styled.span`
+  color: white;
+`

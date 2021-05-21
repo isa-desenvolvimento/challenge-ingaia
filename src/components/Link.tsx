@@ -1,12 +1,7 @@
 import NextLink from 'next/link'
-import { ReactNode } from 'react'
+import { LinkProps } from 'types/components'
 
-type ILinkProps = {
-  href: string
-  children: ReactNode
-}
-
-export default function Link({ href, children }: ILinkProps) {
+export default function Link({ href, children }: LinkProps) {
   return (
     <NextLink href={href}>
       <a>{children}</a>
