@@ -1,7 +1,7 @@
 import { useTranslationContext } from 'locales/translationContext'
 
 export default function NotFoundItem() {
-  const { translation } = useTranslationContext()
+  const translation = useTranslationContext()
 
-  return <div>personagem nao encontrado</div>
+  return <div>{translation.NOT_FOUND}</div>
 }
