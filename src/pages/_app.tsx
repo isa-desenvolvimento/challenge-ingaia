@@ -7,15 +7,17 @@ import { ModalProvider } from 'styled-react-modal'
 import Router from 'next/router'
 import NProgress from 'nprogress'
 import Loading from 'components/Loading'
+import NotFoundItem from 'components/NotFoundItem'
 
-Router.events.on('routeChangeStart', (url) => {
-  console.log(url)
-
+Router.events.on('routeChangeStart', () => {
   NProgress.start()
   return <Loading />
 })
 Router.events.on('routeChangeComplete', () => NProgress.done())
-Router.events.on('routeChangeError', () => NProgress.start())
+Router.events.on('routeChangeError', () => {
+  NProgress.start()
+  return <NotFoundItem />
+})
 
 function App({ Component, pageProps }: AppProps) {
   const translation = useTranslationContext()
