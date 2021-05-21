@@ -5,10 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "lint": "eslint src --max-warnings=0",
     "prepare": "husky install",
-    "test": "jest"
+    "test": "jest",
+    "heroku-postbuild": "yarn run build"
   },
   "dependencies": {
     "@apollo/client": "^3.3.19",
