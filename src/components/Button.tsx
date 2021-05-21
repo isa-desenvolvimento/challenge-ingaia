@@ -6,7 +6,8 @@ export default function Button({
   onclick,
   isMobile = false,
   disabled = false,
-  type = 'button'
+  type = 'button',
+  hasMargin = false
 }: ButtonProps) {
   return (
     <S.Button
@@ -14,6 +15,7 @@ export default function Button({
       isMobile={isMobile}
       disabled={disabled}
       type={type}
+      hasMargin={hasMargin}
     >
       {text}
     </S.Button>

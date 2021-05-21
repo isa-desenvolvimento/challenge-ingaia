@@ -8,6 +8,7 @@ type ItemsProps = {
   status: string
   width?: string
   height?: string
+  onclick?: () => void
 }
 
 export default function ItemList({
@@ -16,12 +17,13 @@ export default function ItemList({
   image,
   status,
   width = '283',
-  height = '238'
+  height = '238',
+  onclick
 }: ItemsProps) {
   const translation = useTranslationContext()
 
   return (
-    <S.Container>
+    <S.Container onClick={onclick}>
       <S.ImageContainer
         src={image}
         alt={`${translation.IMAGE_EPISODE} ${name}`}

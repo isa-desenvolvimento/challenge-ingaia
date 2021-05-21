@@ -3,6 +3,7 @@ import Head from 'next/head'
 import GlobalStyles from 'styles/global'
 import Layout from 'components/Layout'
 import { useTranslationContext } from 'locales/translationContext'
+import { ModalProvider } from 'styled-react-modal'
 
 function App({ Component, pageProps }: AppProps) {
   const translation = useTranslationContext()
@@ -19,7 +20,9 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       <GlobalStyles />
       <Layout>
-        <Component {...pageProps} />
+        <ModalProvider>
+          <Component {...pageProps} />
+        </ModalProvider>
       </Layout>
     </>
   )

@@ -11,6 +11,8 @@ export const Container = styled.div`
 export const InputContainer = styled.div`
   margin: 2rem 0;
   height: 3rem;
+  display: flex;
+  justify-content: center;
 `
 export const Input = styled.input`
   background-color: transparent;
@@ -21,14 +23,3 @@ export const Input = styled.input`
   height: 100%;
   padding: 1.8rem;
 `
-
-// export const Button = styled.button`
-//   margin-left: 15px;
-//   width: 5em;
-//   height: 100%;
-//   color: white;
-//   border-color: rgba(255, 255, 255, 0.664);
-//   background-color: transparent;
-//   border-radius: 5px;
-//   transition-duration: 0.4s;
-// `

@@ -12,6 +12,7 @@ export type ButtonProps = {
   isMobile?: boolean
   disabled?: boolean
   type?: string
+  hasMargin?: false
 }
 
 export type LinkProps = {

@@ -4,14 +4,28 @@ import Item from 'components/Item'
 import Button from 'components/Button'
 import { useTranslationContext } from 'locales/translationContext'
 
-export default function Details({ item }) {
+export default function Details({
+  isOpen,
+  onBackgroundClick,
+  onEscapeKeydown,
+  item
+}) {
   const transition = useTranslationContext()
 
   return (
-    <S.Modal>
+    <S.ModalContent
+      isOpen={isOpen}
+      onBackgroundClick={onBackgroundClick}
+      onEscapeKeydown={onEscapeKeydown}
+    >
       <S.Container>
         <S.Left>
-          <Button text={transition.CLOSE} isMobile={true} />
+          <Button
+            text={transition.CLOSE}
+            isMobile={true}
+            onclick={onBackgroundClick}
+            hasMargin={true}
+          />
           <S.Image>
             <Item {...item} width="401" height="598" />
           </S.Image>
@@ -20,8 +34,7 @@ export default function Details({ item }) {
           <S.TextContainer>
             <S.Title>{transition.ABOUT}</S.Title>
             <S.Text>
-              Rick Sanchez is a male human. He is alive and well. Last seen in
-              May 31, 2020.
+              {`${item.name} is a ${item.gender} ${item.species}. It is ${item.status} `}
             </S.Text>
           </S.TextContainer>
           <S.TextContainer>
@@ -38,6 +51,6 @@ export default function Details({ item }) {
           </S.TextContainer>
         </S.Right>
       </S.Container>
-    </S.Modal>
+    </S.ModalContent>
   )
 }

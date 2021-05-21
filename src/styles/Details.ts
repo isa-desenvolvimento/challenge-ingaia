@@ -8,7 +8,6 @@ export const Container = styled.div`
 
   &:hover {
     border: 2px solid rgba(251, 255, 5, 0.794);
-    cursor: pointer;
   }
 
   img {

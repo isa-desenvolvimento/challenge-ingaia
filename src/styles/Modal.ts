@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import Modal from 'styled-react-modal'
 
-export const Modal = styled.div`
+export const ModalContent = Modal.styled`
   background: #00000080;
   position: absolute;
   top: 0;
