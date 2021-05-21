@@ -119,3 +119,19 @@ export const H1 = styled.h1`
 export const Text = styled.span`
   color: white;
 `
+
+export const ButtonMobile = styled.button`
+  display: none;
+
+  @media (max-width: 800px) {
+    display: block;
+    background: none;
+    font-size: 3rem;
+    color: white;
+    border: none;
+    display: block;
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+  }
+`

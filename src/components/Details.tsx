@@ -18,6 +18,8 @@ export default function Details({
       onBackgroundClick={onBackgroundClick}
       onEscapeKeydown={onEscapeKeydown}
     >
+      <S.ButtonMobile onClick={onBackgroundClick}>x</S.ButtonMobile>
+
       <S.Container>
         <S.Left>
           <Button
