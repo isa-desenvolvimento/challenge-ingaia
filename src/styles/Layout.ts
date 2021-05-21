@@ -10,5 +10,7 @@ export const Container = styled.main`
   background-size: cover;
   background-color: rgb(15, 15, 15);
 
+  font-family: 'Nunito';
+
   overflow: scroll;
 `

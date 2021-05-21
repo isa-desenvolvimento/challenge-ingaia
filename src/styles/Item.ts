@@ -44,4 +44,13 @@ export const Description = styled.div`
   border-bottom-right-radius: inherit;
   border-bottom-left-radius: inherit;
   max-width: 339px;
+  overflow: hidden;
+
+  h2 {
+    text-overflow: ellipsis;
+  }
+
+  span {
+    text-overflow: ellipsis;
+  }
 `
