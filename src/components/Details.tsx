@@ -24,7 +24,7 @@ export default function Details({
         <S.Left>
           <Button
             text={transition.CLOSE}
-            isMobile={true}
+            isDisplay={true}
             onclick={onBackgroundClick}
             hasMargin={true}
           />

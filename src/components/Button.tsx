@@ -4,7 +4,7 @@ import { ButtonProps } from 'types/components'
 export default function Button({
   text,
   onclick,
-  isMobile = false,
+  isDisplay = false,
   disabled = false,
   type = 'button',
   hasMargin = false
@@ -12,7 +12,7 @@ export default function Button({
   return (
     <S.Button
       onClick={onclick}
-      isMobile={isMobile}
+      isDisplay={isDisplay}
       disabled={disabled}
       type={type}
       hasMargin={hasMargin}

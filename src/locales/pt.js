@@ -6,6 +6,7 @@ const pt = {
   ABOUT: 'SOBRE',
   ORIGIN: 'ORIGEM',
   LOCATION: 'LOCALIDADE',
-  CLOSE: 'Fechar'
+  CLOSE: 'Fechar',
+  ALT_LOGO: 'Logo Rick e Morty'
 }
 export default pt

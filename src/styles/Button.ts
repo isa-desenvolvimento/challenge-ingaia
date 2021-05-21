@@ -25,6 +25,6 @@ export const Button = styled.button`
   align-self: flex-start;
 
   @media (max-width: 800px) {
-    display: ${({ isMobile = false }) => (isMobile ? 'none' : 'block')};
+    display: ${({ isDisplay }) => (isDisplay ? 'none' : 'block')};
   }
 `

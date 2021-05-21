@@ -6,7 +6,8 @@ const en = {
   ABOUT: 'About',
   ORIGIN: 'ORIGIN',
   LOCATION: 'LOCALE',
-  CLOSE: 'Close'
+  CLOSE: 'Close',
+  ALT_LOGO: 'Logo Rick and Morty'
 }
 
 export default en

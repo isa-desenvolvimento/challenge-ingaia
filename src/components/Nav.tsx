@@ -27,7 +27,12 @@ const Nav = () => {
 
   return (
     <S.Container>
-      <Image src="/assets/image-logo.png" width="502" height="214" />
+      <Image
+        src="/assets/image-logo.png"
+        width="502"
+        height="214"
+        alt={translation.ALT_LOGO}
+      />
 
       <form onSubmit={handleSubmit}>
         <S.InputContainer>
