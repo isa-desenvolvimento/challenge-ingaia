@@ -4,15 +4,21 @@ import GlobalStyles from 'styles/global'
 import Layout from 'components/Layout'
 import { useTranslationContext } from 'locales/translationContext'
 import { ModalProvider } from 'styled-react-modal'
-import { Router } from 'next/router'
-import Nprogress from 'nprogress'
+import Router from 'next/router'
+import NProgress from 'nprogress'
+import Loading from 'components/Loading'
+
+Router.events.on('routeChangeStart', (url) => {
+  console.log(url)
+
+  NProgress.start()
+  return <Loading />
+})
+Router.events.on('routeChangeComplete', () => NProgress.done())
+Router.events.on('routeChangeError', () => NProgress.start())
 
 function App({ Component, pageProps }: AppProps) {
   const translation = useTranslationContext()
-
-  Router.events.on('routerChangeStart', (url: string) => Nprogress.start())
-  Router.events.on('routerChangeComplete', () => Nprogress.done())
-  Router.events.on('routerChangeError', () => Nprogress.start())
 
   return (
     <>

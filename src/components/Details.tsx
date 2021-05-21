@@ -1,4 +1,4 @@
-import * as S from 'styles/Modal'
+import * as S from 'styles/Details'
 
 import Item from 'components/Item'
 import Button from 'components/Button'
