@@ -37,7 +37,9 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="pt-BR">
-        <Head />
+        <Head>
+          <link rel="stylesheet" href="nprogress.css" />
+        </Head>
         <body>
           <Main />
           <NextScript />
