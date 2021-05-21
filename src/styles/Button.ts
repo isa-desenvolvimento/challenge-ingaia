@@ -9,7 +9,6 @@ export const Button = styled.button`
   border-radius: 5px;
   transition-duration: 0.4s;
   padding: 1.8rem; */
-  margin: ${({ hasMargin }) => (hasMargin ? '15px' : 0)};
   margin-left: 15px;
   width: 5em;
   color: white;
@@ -23,8 +22,9 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-self: flex-start;
+  display: block;
 
   @media (max-width: 800px) {
-    display: ${({ isDisplay }) => (isDisplay ? 'none' : 'block')};
+    display: none;
   }
 `

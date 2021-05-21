@@ -135,3 +135,6 @@ export const ButtonMobile = styled.button`
     left: 3rem;
   }
 `
+export const Margin = styled.div`
+  margin: 15px;
+`

@@ -45,7 +45,6 @@ const Nav = () => {
             disabled={search === ''}
             type="submit"
             text={translation.SEARCH}
-            hasMargin={false}
           />
         </S.InputContainer>
       </form>

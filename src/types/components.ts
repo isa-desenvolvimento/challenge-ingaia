@@ -9,10 +9,8 @@ export type localeContextProps = any
 export type ButtonProps = {
   text: string
   onclick?: () => void
-  isDisplay?: boolean
   disabled?: boolean
   type?: 'button' | 'submit' | 'reset'
-  hasMargin?: boolean
 }
 
 export type LinkProps = {

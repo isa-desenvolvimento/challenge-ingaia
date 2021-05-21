@@ -22,12 +22,13 @@ export default function Details({
 
       <S.Container>
         <S.Left>
-          <Button
-            text={transition.CLOSE}
-            isDisplay={true}
-            onclick={onBackgroundClick}
-            hasMargin={true}
-          />
+          <S.Margin>
+            <Button
+              text={transition.CLOSE}
+              onclick={onBackgroundClick}
+              type="button"
+            />
+          </S.Margin>
           <S.Image>
             <Item {...item} width="401" height="598" />
           </S.Image>
