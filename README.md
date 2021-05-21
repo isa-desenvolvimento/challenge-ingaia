@@ -13,16 +13,17 @@
 - [x]  Bom uso de HTML5, CSS3 e API do browser
 - [x]  Layout responsivo para outros tamanhos de tela além dos especificados no design
 - [ ]  Navegação por teclado
-- [ ]  Readme bem estruturado explicando o projeto em alto nível, como executar, compilar e testar
-- [ ]  Acessibilidade
+- [x]  Readme bem estruturado explicando o projeto em alto nível, como executar, compilar e testar
+- [x]  Acessibilidade
 - [ ]  Teste unitário e teste de integração
 - [ ]  Testes E2E
 - [x]  Publicado no gitPages
 - [x]  Travis CI
 - [x]  Eslint + Prettier + husky + commitlint
 - [x]  Internacionalização
+- [x]  Heroku
 
-### 🏆 Aplicação [Demo](https://pokemontt.herokuapp.com/)
+### 🏆 Aplicação [Demo](https://challengeingaia.herokuapp.com/)
 
 ### Pré-requisitos
 
