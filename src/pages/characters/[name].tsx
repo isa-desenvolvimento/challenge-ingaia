@@ -9,7 +9,6 @@ import NotFoundItem from 'components/NotFoundItem'
 import * as S from 'styles/Card'
 
 import GET_CHARACTERES from 'lib/queries/getCharacteres'
-import { initializeApollo } from 'lib/apollo'
 
 export default function List({ page, name }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -56,12 +55,6 @@ export default function List({ page, name }) {
 
 export const getServerSideProps = async ({ query }) => {
   const { name, page } = await query
-
-  const apolloClient = initializeApollo()
-  await apolloClient.query({
-    query: GET_CHARACTERES,
-    variables: { page: parseInt(page), name }
-  })
 
   return {
     props: { page: parseInt(page), name }
