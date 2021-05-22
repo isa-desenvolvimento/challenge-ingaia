@@ -7,7 +7,10 @@ const en = {
   ORIGIN: 'ORIGIN',
   LOCATION: 'LOCALE',
   CLOSE: 'Close',
-  ALT_LOGO: 'Logo Rick and Morty'
+  ALT_LOGO: 'Logo Rick and Morty',
+  ALT_LOADING: 'Loading',
+  LOADING: 'Loading...',
+  PLACEHOLDER: 'Search characters'
 }
 
 export default en

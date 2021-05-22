@@ -5,10 +5,11 @@ export default function Button({
   text,
   onclick,
   disabled = false,
-  type = 'button'
+  type = 'button',
+  theme = 'block'
 }: ButtonProps) {
   return (
-    <S.Button disabled={disabled} type={type} onClick={onclick}>
+    <S.Button disabled={disabled} type={type} onClick={onclick} theme={theme}>
       {text}
     </S.Button>
   )

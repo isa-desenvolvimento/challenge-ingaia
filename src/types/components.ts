@@ -12,6 +12,7 @@ export type ButtonProps = {
   onclick?: () => void
   disabled?: boolean
   type?: 'button' | 'submit' | 'reset'
+  theme?: 'none' | 'block'
 }
 
 export type LinkProps = {

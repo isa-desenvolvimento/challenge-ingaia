@@ -21,8 +21,7 @@ const Nav = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    if (e.target[0].form[0].value)
-      router.push(`/characters/${e.target[0].form[0].value}`)
+    if (search) router.push(`/characters/${search}?page=1`)
   }
 
   return (
@@ -37,7 +36,7 @@ const Nav = () => {
       <form onSubmit={handleSubmit}>
         <S.InputContainer>
           <S.Input
-            placeholder="Search characters"
+            placeholder={translation.PLACEHOLDER}
             value={search}
             onChange={(e) => searchEvt(e)}
           />

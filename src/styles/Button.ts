@@ -1,14 +1,6 @@
 import styled from 'styled-components'
 
 export const Button = styled.button`
-  /* margin-left: 15px;
-  width: 5em;
-  color: white;
-  border-color: rgba(255, 255, 255, 0.664);
-  background-color: transparent;
-  border-radius: 5px;
-  transition-duration: 0.4s;
-  padding: 1.8rem; */
   margin-left: 15px;
   width: 5em;
   color: white;
@@ -25,6 +17,6 @@ export const Button = styled.button`
   display: block;
 
   @media (max-width: 800px) {
-    display: none;
+    display: ${({ theme }) => theme};
   }
 `
