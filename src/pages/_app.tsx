@@ -4,23 +4,9 @@ import GlobalStyles from 'styles/global'
 import Layout from 'components/Layout'
 import { useTranslationContext } from 'locales/translationContext'
 import { ModalProvider } from 'styled-react-modal'
-import Router from 'next/router'
-import NProgress from 'nprogress'
-import Loading from 'components/Loading'
-import NotFoundItem from 'components/NotFoundItem'
 
 import { ApolloProvider } from '@apollo/client'
 import { useApollo } from '../lib/apollo'
-
-Router.events.on('routeChangeStart', () => {
-  NProgress.start()
-  return <Loading />
-})
-Router.events.on('routeChangeComplete', () => NProgress.done())
-Router.events.on('routeChangeError', () => {
-  NProgress.start()
-  return <NotFoundItem />
-})
 
 function App({ Component, pageProps }: AppProps) {
   const translation = useTranslationContext()
