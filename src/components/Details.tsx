@@ -27,6 +27,7 @@ export default function Details({
               text={transition.CLOSE}
               onclick={onBackgroundClick}
               type="button"
+              isMobileDetails="none"
             />
           </S.Margin>
           <S.Image>

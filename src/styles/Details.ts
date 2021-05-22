@@ -22,15 +22,6 @@ export const Container = styled.div`
   border-radius: 8px;
 
   @media (max-width: 800px) {
-    /* position: relative;
-    width: 80%;
-    height: 80%;
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    margin: auto;
-    box-shadow: inset 0 0 1em #00000080, 0 0 1em #00000080;
-    border-radius: 8px; */
     margin-top: 30%;
     display: list-item;
     -webkit-box-pack: center;
@@ -45,17 +36,10 @@ export const Container = styled.div`
 `
 export const Image = styled.div`
   margin-left: -15%;
-  /* margin-top: 10%; */
   border-radius: inherit;
   margin-right: 10%;
 
   @media (max-width: 800px) {
-    /* margin: 0;
-    width: 80 !important;
-    height: 40 !important;
-
-    text-align: center; */
-
     margin: auto;
     width: 150px;
     height: 150px;
@@ -67,7 +51,6 @@ export const Image = styled.div`
 export const Left = styled.div`
   backdrop-filter: blur(2rem);
   width: 35%;
-  /* margin-left: 15%; */
   height: 100%;
   background-color: #bdbcbc2e;
   border-bottom-left-radius: inherit;

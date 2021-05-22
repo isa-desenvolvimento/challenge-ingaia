@@ -17,6 +17,6 @@ export const Button = styled.button`
   display: block;
 
   @media (max-width: 800px) {
-    display: none;
+    display: ${({ isMobileDetails }) => isMobileDetails};
   }
 `

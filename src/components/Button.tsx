@@ -5,10 +5,16 @@ export default function Button({
   text,
   onclick,
   disabled = false,
-  type = 'button'
+  type = 'button',
+  isMobileDetails = 'block'
 }: ButtonProps) {
   return (
-    <S.Button disabled={disabled} type={type} onClick={onclick}>
+    <S.Button
+      disabled={disabled}
+      type={type}
+      onClick={onclick}
+      isMobileDetails={isMobileDetails}
+    >
       {text}
     </S.Button>
   )

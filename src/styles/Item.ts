@@ -23,8 +23,9 @@ export const Container = styled.div`
   }
 
   @media (max-width: 800px) {
-    min-width: 150px !important;
-    min-height: 150px !important;
+    position: relative;
+    border-radius: 8px;
+    margin: auto;
   }
 `
 export const ImageContainer = styled(Image)`
