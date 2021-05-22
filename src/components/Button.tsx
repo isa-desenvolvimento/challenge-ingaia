@@ -6,15 +6,10 @@ export default function Button({
   onclick,
   disabled = false,
   type = 'button',
-  isMobileDetails = 'block'
+  theme = 'block'
 }: ButtonProps) {
   return (
-    <S.Button
-      disabled={disabled}
-      type={type}
-      onClick={onclick}
-      isMobileDetails={isMobileDetails}
-    >
+    <S.Button disabled={disabled} type={type} onClick={onclick} theme={theme}>
       {text}
     </S.Button>
   )
