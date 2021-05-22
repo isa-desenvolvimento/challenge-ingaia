@@ -18,7 +18,7 @@ export default function List({ page, name }) {
   const router = useRouter()
 
   const { data, loading, error } = useQuery(GET_CHARACTERES, {
-    variables: { page: parseInt(page), name }
+    variables: { page, name }
   })
 
   if (loading) return <Loading />
@@ -70,10 +70,10 @@ export default function List({ page, name }) {
           activeClassName={'active'}
           containerClassName={'pagination'}
           subContainerClassName={'pages pagination'}
-          initialPage={data.characters.info.pages - 1}
-          pageCount={data.characters.info.count}
+          initialPage={1}
+          pageCount={data.characters.info.pages}
           marginPagesDisplayed={2}
-          pageRangeDisplayed={5}
+          pageRangeDisplayed={25}
           onPageChange={pagginationHandler}
         />
       </S.ReactPaginateContainer>
@@ -90,9 +90,7 @@ export const getServerSideProps = async ({ query }) => {
     variables: { page: parseInt(page), name }
   })
 
-  console.log(page, name)
-
   return {
-    props: { page, name }
+    props: { page: parseInt(page), name }
   }
 }
