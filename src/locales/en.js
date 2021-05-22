@@ -9,7 +9,8 @@ const en = {
   CLOSE: 'Close',
   ALT_LOGO: 'Logo Rick and Morty',
   ALT_LOADING: 'Loading',
-  LOADING: 'Loading...'
+  LOADING: 'Loading...',
+  PLACEHOLDER: 'Search characters'
 }
 
 export default en

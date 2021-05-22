@@ -9,6 +9,9 @@ import NProgress from 'nprogress'
 import Loading from 'components/Loading'
 import NotFoundItem from 'components/NotFoundItem'
 
+import { ApolloProvider } from '@apollo/client'
+import { useApollo } from '../lib/apollo'
+
 Router.events.on('routeChangeStart', () => {
   NProgress.start()
   return <Loading />
@@ -21,6 +24,7 @@ Router.events.on('routeChangeError', () => {
 
 function App({ Component, pageProps }: AppProps) {
   const translation = useTranslationContext()
+  const apolloClient = useApollo(pageProps.initialApolloState)
 
   return (
     <>
@@ -39,9 +43,11 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       <GlobalStyles />
       <Layout>
-        <ModalProvider>
-          <Component {...pageProps} />
-        </ModalProvider>
+        <ApolloProvider client={apolloClient}>
+          <ModalProvider>
+            <Component {...pageProps} />
+          </ModalProvider>
+        </ApolloProvider>
       </Layout>
     </>
   )

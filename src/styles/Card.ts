@@ -8,3 +8,14 @@ export const Card = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   margin: 3rem auto;
 `
+
+export const ReactPaginateContainer = styled.div`
+  ul {
+    color: #fdfdfd;
+    display: flex;
+    gap: 3rem;
+    list-style-type: none;
+    justify-content: center;
+    margin: 3rem;
+  }
+`
