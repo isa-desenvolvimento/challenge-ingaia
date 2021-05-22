@@ -1,13 +1,12 @@
 import { useQuery } from '@apollo/client'
 import { useState } from 'react'
-import ReactPaginate from 'react-paginate'
-import { useRouter } from 'next/router'
 
 import Item from 'components/Item'
 import Details from 'components/Details'
 import Loading from 'components/Loading'
-import * as S from 'styles/Card'
+import Pagination from 'components/Pagination'
 import NotFoundItem from 'components/NotFoundItem'
+import * as S from 'styles/Card'
 
 import GET_CHARACTERES from 'lib/queries/getCharacteres'
 import { initializeApollo } from 'lib/apollo'
@@ -15,7 +14,6 @@ import { initializeApollo } from 'lib/apollo'
 export default function List({ page, name }) {
   const [isOpen, setIsOpen] = useState(false)
   const [character, setCharacter] = useState({})
-  const router = useRouter()
 
   const { data, loading, error } = useQuery(GET_CHARACTERES, {
     variables: { page, name }
@@ -30,16 +28,6 @@ export default function List({ page, name }) {
     setIsOpen(!isOpen)
   }
 
-  const pagginationHandler = (page) => {
-    const currentPath = router.pathname
-    const currentQuery = router.query
-    currentQuery.page = page.selected + 1
-
-    router.push({
-      pathname: currentPath,
-      query: currentQuery
-    })
-  }
   return (
     <>
       <S.Card>
@@ -61,22 +49,7 @@ export default function List({ page, name }) {
           item={character}
         />
       </S.Card>
-      <S.ReactPaginateContainer>
-        <ReactPaginate
-          previousLabel={'<'}
-          nextLabel={'>'}
-          breakLabel={'...'}
-          breakClassName={'break-me'}
-          activeClassName={'active'}
-          containerClassName={'pagination'}
-          subContainerClassName={'pages pagination'}
-          initialPage={1}
-          pageCount={data.characters.info.pages}
-          marginPagesDisplayed={2}
-          pageRangeDisplayed={25}
-          onPageChange={pagginationHandler}
-        />
-      </S.ReactPaginateContainer>
+      <Pagination pageCount={data.characters.info.pages} />
     </>
   )
 }
