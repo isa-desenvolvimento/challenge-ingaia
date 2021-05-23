@@ -10,7 +10,9 @@ const en = {
   ALT_LOGO: 'Logo Rick and Morty',
   ALT_LOADING: 'Loading',
   LOADING: 'Loading...',
-  PLACEHOLDER: 'Search characters'
+  PLACEHOLDER: 'Search characters',
+  BTN_DETAILS: '',
+  ARIAL_LABEL_DETAILS: 'Modal de detalhe do personagem'
 }
 
 export default en

@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Carousel /> should render snapshot 1`] = `
+<div>
+  <div
+    class="carousel-root"
+    tabindex="0"
+  >
+    <div
+      class="carousel carousel-slider"
+      style="width: 100%;"
+    >
+      <ul
+        class="control-dots"
+      >
+        <li
+          aria-label="slide item 1"
+          class="dot selected"
+          role="button"
+          tabindex="0"
+          value="0"
+        />
+      </ul>
+      <button
+        aria-label="previous slide / item"
+        class="control-arrow control-prev control-disabled"
+        type="button"
+      />
+      <div
+        class="slider-wrapper axis-horizontal"
+        style="height: auto;"
+      >
+        <ul
+          class="slider animated"
+          style="transform: translate3d(0,0,0); transition-duration: 350ms; height: auto;"
+        >
+          <li
+            class="slide selected"
+          >
+            <div
+              class="container"
+            >
+              <img
+                alt="844171-MLA41757309022_052020"
+                src="http://http2.mlstatic.com/D_844171-MLA41757309022_052020-O.jpg"
+              />
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button
+        aria-label="next slide / item"
+        class="control-arrow control-next control-disabled"
+        type="button"
+      />
+    </div>
+  </div>
+</div>
+`;

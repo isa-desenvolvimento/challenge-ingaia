@@ -5,6 +5,8 @@ module.exports = {
   collectCoverageFrom: ['src/**/*.ts(x)?'],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   moduleNameMapper: {
-    '\\.(css|less|sass|scss)$': 'identity-obj-proxy'
+    // '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
+    'ˆstyled-components':
+      '<rootDir>/node_modules/styled-components/dist/styled-components.browser.cjs.js'
   }
 }

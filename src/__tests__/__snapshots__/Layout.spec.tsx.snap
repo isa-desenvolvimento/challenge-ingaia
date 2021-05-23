@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Layout /> should render snapshot 1`] = `
+<div>
+  <nav
+    class="container"
+  >
+    <div
+      class="logo"
+      data-testid="img_nav"
+    />
+    <form
+      class="inputContainer"
+      data-testid="frm_nav"
+    >
+      <input
+        data-testid="inp_nav"
+        placeholder="Nunca dejes de buscar"
+        type="text"
+      />
+      <button
+        class="search"
+        data-testid="btn_nav"
+        type="submit"
+      >
+         
+      </button>
+    </form>
+  </nav>
+  <div
+    class="container"
+  >
+    <main
+      class="main"
+    >
+      <h1>
+        Test Layout
+      </h1>
+    </main>
+  </div>
+</div>
+`;

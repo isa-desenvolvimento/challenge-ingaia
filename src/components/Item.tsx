@@ -1,5 +1,5 @@
-import * as S from 'styles/Item'
-import { useTranslationContext } from 'locales/translationContext'
+import * as S from '../styles/Item'
+import { useTranslationContext } from '../locales/translationContext'
 
 type ItemsProps = {
   name: string
@@ -31,6 +31,8 @@ export default function ItemList({
         height={height}
         objectFit="cover"
         title={status}
+        loading="lazy"
+        role="image"
       />
       <S.Description>
         <div>

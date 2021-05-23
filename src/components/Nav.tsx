@@ -31,6 +31,7 @@ const Nav = () => {
         width="502"
         height="214"
         alt={translation.ALT_LOGO}
+        loading="lazy"
       />
 
       <form onSubmit={handleSubmit}>

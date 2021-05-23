@@ -13,6 +13,7 @@ export type ButtonProps = {
   disabled?: boolean
   type?: 'button' | 'submit' | 'reset'
   theme?: 'none' | 'block'
+  arialLabel: string
 }
 
 export type LinkProps = {
