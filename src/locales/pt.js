@@ -21,6 +21,8 @@ const pt = {
   ARIAL_LABEL_DETAILS_TEXT: 'Texto da modal de detalhes sobre ',
   TEXT_EARTH: 'Earth (Replacement Dimension)',
   ARIAL_LABEL_ITEM_TEXT: 'Texto do item',
-  ARIAL_LABEL_TITLE: 'Título de'
+  ARIAL_LABEL_TITLE: 'Título de',
+  ARIAL_LABEL_BTN_SEARCH: 'Botão de pesquisa',
+  ARIAL_LABEL_INPUT: 'Input de pesquisa'
 }
 export default pt
