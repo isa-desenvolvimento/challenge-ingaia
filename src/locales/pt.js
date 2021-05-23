@@ -12,6 +12,12 @@ const pt = {
   LOADING: 'Carregando...',
   PLACEHOLDER: 'Buscar personagem',
   BTN_DETAILS: 'Botão para fechar modal',
-  ARIAL_LABEL_DETAILS: 'Modal de detalhe do personagem'
+  PLANET: 'Planeta',
+  ARIAL_LABEL_DETAILS: 'Modal de detalhe do personagem',
+  TITLE_DETAILS_ABOUT: 'Título de sobre dos detalhes do personagem',
+  TITLE_DETAILS_ORIGIN: 'Título de origem dos detalhes do personagem',
+  TITLE_DETAILS_LOCATION: 'Título de localidade dos detalhes do personagem',
+  DIMENSION_REPLACEMENT: 'Dimensão de Substituição',
+  ARIAL_LABEL_DETAILS_TEXT: 'Texto da modal de detalhes sobre '
 }
 export default pt

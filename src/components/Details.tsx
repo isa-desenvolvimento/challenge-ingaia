@@ -3,6 +3,8 @@ import * as S from '../styles/Details'
 import Item from '../components/Item'
 import Button from '../components/Button'
 import { useTranslationContext } from '../locales/translationContext'
+import Title from './Title'
+import Text from './Text'
 
 export default function Details({
   isOpen,
@@ -39,22 +41,54 @@ export default function Details({
         </S.Left>
         <S.Right>
           <S.TextContainer>
-            <S.Title role="about">{transition.ABOUT}</S.Title>
-            <S.Text>
-              {`${item.name} is a ${item.gender} ${item.species}. It is ${item.status} `}
-            </S.Text>
+            <Title
+              role="title_about"
+              arialLabel={transition.TITLE_DETAILS_ABOUT}
+              text={transition.ABOUT}
+            />
+            <Text
+              role="about_text"
+              arialLabel={`${transition.ARIAL_LABEL_DETAILS_TEXT} ${item.name}`}
+              text={`${item.name} is a ${item.gender} ${item.species}. It is ${item.status} `}
+            />
           </S.TextContainer>
           <S.TextContainer>
-            <S.Title role="origin">{transition.ORIGIN}</S.Title>
-            <S.Text>Planet</S.Text>
+            <Title
+              role="title_origin"
+              arialLabel={transition.TITLE_DETAILS_ORIGIN}
+              text={transition.ORIGIN}
+            />
+
+            <Text
+              role="planet_origin_text"
+              arialLabel={`${transition.ARIAL_LABEL_DETAILS_TEXT} ${transition.PLANET}`}
+              text={transition.PLANET}
+            />
+
             <S.H1>Earth (Replacement Dimension)</S.H1>
-            <S.Text>Replacement Dimension</S.Text>
+            <Text
+              role="text_origin"
+              arialLabel={`${transition.ARIAL_LABEL_DETAILS_TEXT} ${transition.DIMENSION_REPLACEMENT}`}
+              text={transition.DIMENSION_REPLACEMENT}
+            />
           </S.TextContainer>
           <S.TextContainer>
-            <S.Title role="location">{transition.LOCATION}</S.Title>
-            <S.Text> Planet</S.Text>
+            <Title
+              role="title_location"
+              arialLabel={transition.TITLE_DETAILS_LOCATION}
+              text={transition.LOCATION}
+            />
+            <Text
+              role="location_text_planet"
+              arialLabel={`${transition.ARIAL_LABEL_DETAILS_TEXT} ${transition.PLANET}`}
+              text={transition.PLANET}
+            />
             <S.H1>Earth (Replacement Dimension)</S.H1>
-            <S.Text>Replacement Dimension</S.Text>
+            <Text
+              role="text_location"
+              arialLabel={`${transition.ARIAL_LABEL_DETAILS_TEXT} ${transition.DIMENSION_REPLACEMENT}`}
+              text={transition.DIMENSION_REPLACEMENT}
+            />
           </S.TextContainer>
         </S.Right>
       </S.Container>

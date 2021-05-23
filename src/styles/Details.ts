@@ -86,17 +86,7 @@ export const TextContainer = styled.div`
   }
 `
 
-export const Title = styled.h2`
-  color: #cbd736;
-  margin-bottom: 1rem;
-  letter-spacing: 1rem;
-`
-
 export const H1 = styled.h1`
-  color: white;
-`
-
-export const Text = styled.span`
   color: white;
 `
 

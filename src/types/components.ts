@@ -31,3 +31,9 @@ export type ItemsProps = {
 export type CharactersProps = {
   characters: Array<ItemsProps>
 }
+
+export type TitleProps = {
+  text: string
+  role: string
+  arialLabel: string
+}

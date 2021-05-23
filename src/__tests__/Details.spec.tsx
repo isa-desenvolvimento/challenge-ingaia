@@ -29,9 +29,29 @@ describe('<Details />', () => {
 
   it('should render the styled-components titles', () => {
     expect(screen.getByRole(/button/i).textContent).toEqual('Fechar')
-    expect(screen.getByRole(/about/i).textContent).toEqual('SOBRE')
-    expect(screen.getByRole(/origin/i).textContent).toEqual('ORIGEM')
-    expect(screen.getByRole(/location/i).textContent).toEqual('LOCALIDADE')
+    expect(screen.getByRole(/title_about/i).textContent).toEqual('SOBRE')
+    expect(screen.getByRole(/title_origin/i).textContent).toEqual('ORIGEM')
+    expect(screen.getByRole(/title_location/i).textContent).toEqual(
+      'LOCALIDADE'
+    )
+  })
+
+  it('should render the styled-components texts', () => {
+    expect(screen.getByRole(/about_text/i).textContent).toEqual(
+      'foo is a male human. It is alive '
+    )
+    expect(screen.getByRole(/planet_origin_text/i).textContent).toEqual(
+      'Planeta'
+    )
+    expect(screen.getByRole(/text_origin/i).textContent).toEqual(
+      'Dimensão de Substituição'
+    )
+    expect(screen.getByRole(/location_text_planet/i).textContent).toEqual(
+      'Planeta'
+    )
+    expect(screen.getByRole(/text_location/i).textContent).toEqual(
+      'Dimensão de Substituição'
+    )
   })
 
   it('should render the styled-components details', () => {
