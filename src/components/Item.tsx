@@ -16,7 +16,7 @@ export default function ItemList({
   const translation = useTranslationContext()
 
   return (
-    <S.Container onClick={onclick}>
+    <S.Container onClick={onclick} role="item_container">
       <S.ImageContainer
         src={image}
         alt={`${translation.IMAGE_EPISODE} ${name}`}

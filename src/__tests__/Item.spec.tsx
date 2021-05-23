@@ -1,22 +1,14 @@
-import { render } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import { renderWithProvider } from '../utils/helpers'
 import Item from '../components/Item'
 
-jest.mock('next/config', () => () => ({
-  publicRuntimeConfig: {
-    images: {
-      domains: ['cdn.example.com']
-    }
-  }
-}))
-
+// eslint-disable-next-line react/display-name
 jest.mock('next/image', () => ({ src, alt, width, height, status }) => (
   <img
     src={src}
     alt={alt}
     width={width}
     height={height}
-    objectFit="cover"
     title={status}
     loading="lazy"
     role="image"
@@ -29,22 +21,35 @@ describe('<Item />', () => {
     name: 'TEST_NAME',
     species: 'HUMAN',
     status: 'ALIVE',
-    width: 300,
-    height: 300,
+    width: '300',
+    height: '300',
     onclick: jest.fn()
   }
 
-  beforeEach(() => renderWithProvider(<Item {...props} />))
+  beforeEach(() =>
+    renderWithProvider(
+      <Item
+        name={props.name}
+        species={props.species}
+        image={props.image}
+        status={props.status}
+        width={props.width}
+        height={props.height}
+        onclick={props.onclick}
+      />
+    )
+  )
 
-  it('should render component Item children', () => {
-    expect(getByTestId('txt_price_item')).toHaveTextContent('R$ 100,00')
-    expect(getByTestId('txt_title_item')).toHaveTextContent('test')
-    expect(getByTestId('txt_address_item')).toHaveTextContent('city_name_test')
-    expect(getByTestId('ic_shipping_item')).toBeVisible()
+  it('should render the  titles', () => {
+    expect(screen.getByRole(/image/i)).toBeInTheDocument()
+    expect(screen.getByRole(/item_title/i).textContent).toEqual('TEST_NAME')
+    expect(screen.getByRole(/item_text/i).textContent).toEqual('HUMAN')
   })
 
-  it('should render snapshot', () => {
-    const { container } = render(<Item {...props} />)
-    expect(container).toMatchSnapshot()
+  it('should render the styled-components', () => {
+    expect(screen.getByRole(/item_container/i).firstChild).toHaveStyle({
+      'border-radius': '8px',
+      'max-width': '500px'
+    })
   })
 })
