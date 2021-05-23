@@ -18,7 +18,8 @@ const en = {
   TITLE_DETAILS_ORIGIN: 'Título de origem dos detalhes do personagem',
   TITLE_DETAILS_LOCATION: 'Título de localidade dos detalhes do personagem',
   DIMENSION_REPLACEMENT: 'Replacement Dimension',
-  TEXT_EARTH: 'Earth (Replacement Dimension)'
+  TEXT_EARTH: 'Earth (Replacement Dimension)',
+  ARIAL_LABEL_ITEM_TEXT: ''
 }
 
 export default en

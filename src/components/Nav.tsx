@@ -1,9 +1,9 @@
-import * as S from 'styles/Nav'
+import * as S from '../styles/Nav'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { useState } from 'react'
-import { useTranslationContext } from 'locales/translationContext'
-import Button from 'components/Button'
+import { useTranslationContext } from '../locales/translationContext'
+import Button from '../components/Button'
 
 const Nav = () => {
   const [search, setSearch] = useState('')
