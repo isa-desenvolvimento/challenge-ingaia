@@ -65,7 +65,7 @@ export default function Details({
               text={transition.PLANET}
             />
 
-            <S.H1>Earth (Replacement Dimension)</S.H1>
+            <S.H1>{transition.TEXT_EARTH}</S.H1>
             <Text
               role="text_origin"
               arialLabel={`${transition.ARIAL_LABEL_DETAILS_TEXT} ${transition.DIMENSION_REPLACEMENT}`}
@@ -83,7 +83,7 @@ export default function Details({
               arialLabel={`${transition.ARIAL_LABEL_DETAILS_TEXT} ${transition.PLANET}`}
               text={transition.PLANET}
             />
-            <S.H1>Earth (Replacement Dimension)</S.H1>
+            <S.H1>{transition.TEXT_EARTH}</S.H1>
             <Text
               role="text_location"
               arialLabel={`${transition.ARIAL_LABEL_DETAILS_TEXT} ${transition.DIMENSION_REPLACEMENT}`}

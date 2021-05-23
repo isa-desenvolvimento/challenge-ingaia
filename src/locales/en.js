@@ -17,7 +17,8 @@ const en = {
   TITLE_DETAILS_ABOUT: 'Título de sobre dos detalhes do personagem',
   TITLE_DETAILS_ORIGIN: 'Título de origem dos detalhes do personagem',
   TITLE_DETAILS_LOCATION: 'Título de localidade dos detalhes do personagem',
-  DIMENSION_REPLACEMENT: 'Replacement Dimension'
+  DIMENSION_REPLACEMENT: 'Replacement Dimension',
+  TEXT_EARTH: 'Earth (Replacement Dimension)'
 }
 
 export default en
