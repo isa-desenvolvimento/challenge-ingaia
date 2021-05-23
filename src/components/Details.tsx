@@ -24,7 +24,7 @@ export default function Details({
     >
       <S.ButtonMobile onClick={onBackgroundClick}>x</S.ButtonMobile>
 
-      <S.Container role="container">
+      <S.Container role="details_container">
         <S.Left>
           <S.Margin>
             <Button

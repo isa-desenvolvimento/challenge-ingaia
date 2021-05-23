@@ -68,7 +68,7 @@ describe('<Details />', () => {
   })
 
   it('should render the styled-components container', () => {
-    expect(screen.getByRole(/container/i)).toHaveStyle({
+    expect(screen.getByRole(/details_container/i)).toHaveStyle({
       position: 'relative',
       width: '80%',
       height: '80%',
