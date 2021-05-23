@@ -1,14 +1,20 @@
 import { renderWithProvider } from '../utils/helpers'
-import { screen } from '@testing-library/react'
+import { screen, fireEvent } from '@testing-library/react'
 
 import Button from '../components/Button'
 
 describe('<Button />', () => {
+  const onClick = jest.fn()
+
   beforeEach(() =>
-    renderWithProvider(<Button arialLabel="teste" text="teste" type="submit" />)
+    renderWithProvider(
+      <Button arialLabel="teste" text="teste" type="submit" onclick={onClick} />
+    )
   )
 
   it('should render text button', () => {
+    fireEvent.click(screen.getByRole(/button/i))
+    expect(onClick).toBeCalledTimes(1)
     expect(screen.getByRole(/button/i).textContent).toEqual('teste')
   })
 
