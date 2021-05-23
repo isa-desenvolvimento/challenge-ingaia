@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const Title = styled.h2`
-  color: #cbd736;
-  margin-bottom: 1rem;
-  letter-spacing: 1rem;
+  color: ${({ theme }) => theme.color || '#cbd736'};
+  margin-bottom: ${({ theme }) => theme.margin || '1rem'};
+  letter-spacing: ${({ theme }) => theme.letter || '1rem'};
 `
 
 export const Text = styled.span`

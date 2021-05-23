@@ -1,15 +1,8 @@
 import * as S from '../styles/Item'
 import { useTranslationContext } from '../locales/translationContext'
-
-type ItemsProps = {
-  name: string
-  image: string
-  species: string
-  status: string
-  width?: string
-  height?: string
-  onclick?: () => void
-}
+import Text from './Text'
+import Title from './Title'
+import { ItemsProps } from '../types/components'
 
 export default function ItemList({
   name,
@@ -35,10 +28,17 @@ export default function ItemList({
         role="image"
       />
       <S.Description>
-        <div>
-          <h2>{name}</h2>
-          <span> {species} </span>
-        </div>
+        <Title
+          role="item_title"
+          arialLabel={`${translation.ARIAL_LABEL_ITEM_TEXT} ${name}`}
+          text={name}
+          theme={{ color: 'white', letter: '0', margin: '0' }}
+        />
+        <Text
+          role="item_text"
+          arialLabel={`${translation.ARIAL_LABEL_ITEM_TEXT} ${name}`}
+          text={species}
+        />
       </S.Description>
     </S.Container>
   )

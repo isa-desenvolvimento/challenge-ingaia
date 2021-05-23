@@ -19,6 +19,8 @@ const pt = {
   TITLE_DETAILS_LOCATION: 'Título de localidade dos detalhes do personagem',
   DIMENSION_REPLACEMENT: 'Dimensão de Substituição',
   ARIAL_LABEL_DETAILS_TEXT: 'Texto da modal de detalhes sobre ',
-  TEXT_EARTH: 'Earth (Replacement Dimension)'
+  TEXT_EARTH: 'Earth (Replacement Dimension)',
+  ARIAL_LABEL_ITEM_TEXT: 'Texto do item',
+  ARIAL_LABEL_TITLE: 'Título de'
 }
 export default pt

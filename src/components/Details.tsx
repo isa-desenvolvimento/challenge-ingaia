@@ -12,7 +12,7 @@ export default function Details({
   onEscapeKeydown,
   item
 }) {
-  const transition = useTranslationContext()
+  const translation = useTranslationContext()
 
   return (
     <S.ModalContent
@@ -28,11 +28,11 @@ export default function Details({
         <S.Left>
           <S.Margin>
             <Button
-              text={transition.CLOSE}
+              text={translation.CLOSE}
               onclick={onBackgroundClick}
               type="button"
               theme="none"
-              arialLabel={transition.BTN_DETAILS}
+              arialLabel={translation.BTN_DETAILS}
             />
           </S.Margin>
           <S.Image>
@@ -43,51 +43,51 @@ export default function Details({
           <S.TextContainer>
             <Title
               role="title_about"
-              arialLabel={transition.TITLE_DETAILS_ABOUT}
-              text={transition.ABOUT}
+              arialLabel={translation.TITLE_DETAILS_ABOUT}
+              text={translation.ABOUT}
             />
             <Text
               role="about_text"
-              arialLabel={`${transition.ARIAL_LABEL_DETAILS_TEXT} ${item.name}`}
+              arialLabel={`${translation.ARIAL_LABEL_DETAILS_TEXT} ${item.name}`}
               text={`${item.name} is a ${item.gender} ${item.species}. It is ${item.status} `}
             />
           </S.TextContainer>
           <S.TextContainer>
             <Title
               role="title_origin"
-              arialLabel={transition.TITLE_DETAILS_ORIGIN}
-              text={transition.ORIGIN}
+              arialLabel={translation.TITLE_DETAILS_ORIGIN}
+              text={translation.ORIGIN}
             />
 
             <Text
               role="planet_origin_text"
-              arialLabel={`${transition.ARIAL_LABEL_DETAILS_TEXT} ${transition.PLANET}`}
-              text={transition.PLANET}
+              arialLabel={`${translation.ARIAL_LABEL_DETAILS_TEXT} ${translation.PLANET}`}
+              text={translation.PLANET}
             />
 
-            <S.H1>{transition.TEXT_EARTH}</S.H1>
+            <S.H1>{translation.TEXT_EARTH}</S.H1>
             <Text
               role="text_origin"
-              arialLabel={`${transition.ARIAL_LABEL_DETAILS_TEXT} ${transition.DIMENSION_REPLACEMENT}`}
-              text={transition.DIMENSION_REPLACEMENT}
+              arialLabel={`${translation.ARIAL_LABEL_DETAILS_TEXT} ${translation.DIMENSION_REPLACEMENT}`}
+              text={translation.DIMENSION_REPLACEMENT}
             />
           </S.TextContainer>
           <S.TextContainer>
             <Title
               role="title_location"
-              arialLabel={transition.TITLE_DETAILS_LOCATION}
-              text={transition.LOCATION}
+              arialLabel={translation.TITLE_DETAILS_LOCATION}
+              text={translation.LOCATION}
             />
             <Text
               role="location_text_planet"
-              arialLabel={`${transition.ARIAL_LABEL_DETAILS_TEXT} ${transition.PLANET}`}
-              text={transition.PLANET}
+              arialLabel={`${translation.ARIAL_LABEL_DETAILS_TEXT} ${translation.PLANET}`}
+              text={translation.PLANET}
             />
-            <S.H1>{transition.TEXT_EARTH}</S.H1>
+            <S.H1>{translation.TEXT_EARTH}</S.H1>
             <Text
               role="text_location"
-              arialLabel={`${transition.ARIAL_LABEL_DETAILS_TEXT} ${transition.DIMENSION_REPLACEMENT}`}
-              text={transition.DIMENSION_REPLACEMENT}
+              arialLabel={`${translation.ARIAL_LABEL_DETAILS_TEXT} ${translation.DIMENSION_REPLACEMENT}`}
+              text={translation.DIMENSION_REPLACEMENT}
             />
           </S.TextContainer>
         </S.Right>
