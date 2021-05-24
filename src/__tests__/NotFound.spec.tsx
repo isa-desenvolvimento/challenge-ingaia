@@ -1,5 +1,5 @@
 import { renderWithProvider } from '../utils/helpers'
-import { screen, fireEvent } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 
 import NotFound from '../pages/404'
 

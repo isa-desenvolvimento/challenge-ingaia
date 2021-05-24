@@ -2,7 +2,7 @@ import '@testing-library/jest-dom'
 import 'jest-styled-components'
 
 import * as nextRouter from 'next/router'
-
+require('jest-fetch-mock').enableMocks()
 
 
 nextRouter.useRouter = jest.fn()

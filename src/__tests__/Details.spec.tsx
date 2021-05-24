@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import Details from '../components/Details'
 import { renderWithProvider } from '../utils/helpers'
 
