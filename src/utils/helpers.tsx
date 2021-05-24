@@ -1,9 +1,9 @@
-import { render, RenderResult } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import { ModalProvider } from 'styled-react-modal'
 import TranslationProvider from '../locales/TranslationProvider'
 import GET_CHARACTERES from '../lib/queries/getCharacteres'
 
-export const renderWithProvider = (children: React.ReactNode): RenderResult => {
+export const renderWithProvider = (children: React.ReactNode) => {
   render(
     <ModalProvider>
       <TranslationProvider>{children}</TranslationProvider>

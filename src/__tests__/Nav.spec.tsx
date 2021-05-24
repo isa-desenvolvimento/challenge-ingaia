@@ -3,7 +3,6 @@
 import { screen, fireEvent, act } from '@testing-library/react'
 import { renderWithProvider } from '../utils/helpers'
 import Nav from '../components/Nav'
-import router from 'next/router'
 
 describe('<Nav />', () => {
   beforeEach(() => renderWithProvider(<Nav />))
