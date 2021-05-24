@@ -16,7 +16,18 @@ export default function ItemList({
   const translation = useTranslationContext()
 
   return (
-    <S.Container onClick={onclick} role="item_container">
+    <S.Container
+      onClick={onclick}
+      role="item_container"
+      whileHover={{
+        position: 'relative',
+        zIndex: 1,
+        border: ' 2px solid rgba(251, 255, 5, 0.794)',
+        borderRadius: '8px',
+        scale: 1.1,
+        transition: { duration: 0.4 }
+      }}
+    >
       <S.ImageContainer
         src={image}
         alt={`${translation.IMAGE_EPISODE} ${name}`}

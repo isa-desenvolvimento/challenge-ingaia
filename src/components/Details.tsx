@@ -24,7 +24,22 @@ export default function Details({
     >
       <S.ButtonMobile onClick={onBackgroundClick}>x</S.ButtonMobile>
 
-      <S.Container role="details_container">
+      <S.Container
+        role="details_container"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {
+            scale: 0.8,
+            opacity: 0
+          },
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transition: { delay: 0.2 }
+          }
+        }}
+      >
         <S.Left>
           <S.Margin>
             <Button
