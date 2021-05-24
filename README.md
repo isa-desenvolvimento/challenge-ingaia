@@ -5,6 +5,21 @@
 <p align="center">🚀  Sistema para exibição  dos personagens do Rick and Morty.
 </p>
 
+### Telas 
+
+- [x]  Index
+- [x]  Lista de personagem
+- [x]  Detalhes do personagem - modal
+- [x]  Loading
+
+### Telas responsivas 
+
+- [x]  Index
+- [x]  Lista de personagem
+- [x]  Detalhes do personagem - modal
+- [x]  Loading
+- [ ]  
+
 ### Features
 
 - [x]  Boas práticas de desenvolvimento;
