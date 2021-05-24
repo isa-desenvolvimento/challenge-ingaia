@@ -43,12 +43,14 @@ const Nav = () => {
             onChange={(e) => searchEvt(e)}
             arial-label={translation.ARIAL_LABEL_INPUT}
             role="input"
+            data-cy="nav-input"
           />
           <Button
             disabled={search === ''}
             type="submit"
             text={translation.SEARCH}
             arialLabel={translation.ARIAL_LABEL_BTN_SEARCH}
+            data-cy="nav-button"
           />
         </S.InputContainer>
       </form>
