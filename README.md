@@ -5,7 +5,7 @@
 <p align="center">🚀  Sistema para exibição  dos personagens do Rick and Morty.
 </p>
 
-### :desktop_computer: Telas 
+### :desktop_computer:  Telas 
 
 - [x]  Index
 - [x]  Lista de personagem
@@ -65,7 +65,7 @@ $ yarn dev
 # Execute os testes unitários
 $ yarn test
 
-# Execute os testes integração 
+# Execute os testes e2e 
 $ cypress:run
 
 ```
@@ -78,3 +78,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Commitlint](https://commitlint.js.org/)
 - [Husky](https://www.husky.com.br/)
 - [Travis CI](https://travis-ci.com/)
+- [Cypress](https://docs.cypress.io/guides/overview/why-cypress)
