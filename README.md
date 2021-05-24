@@ -15,8 +15,8 @@
 - [ ]  Navegação por teclado
 - [x]  Readme bem estruturado explicando o projeto em alto nível, como executar, compilar e testar
 - [x]  Acessibilidade
-- [ ]  Teste unitário e teste de integração
-- [ ]  Testes E2E
+- [x]  Teste unitário e teste de integração
+- [x]  Testes E2E
 - [x]  Publicado no gitPages
 - [x]  Travis CI
 - [x]  Eslint + Prettier + husky + commitlint
