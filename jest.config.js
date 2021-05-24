@@ -4,6 +4,7 @@ module.exports = {
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.ts(x)?'],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
+  modulePathIgnorePatterns: ['<rootDir>/cypress'],
   moduleNameMapper: {
     // '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
     'ˆstyled-components':
