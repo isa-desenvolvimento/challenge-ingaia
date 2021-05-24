@@ -30,15 +30,30 @@ export default function List({ page, name }) {
 
   return (
     <>
-      <S.Card role="list_container">
+      <S.Card
+        role="list_container"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {
+            scale: 0.8,
+            opacity: 0
+          },
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transition: { delay: 0.4 }
+          }
+        }}
+      >
         {data.characters.results.map((_character, index) => (
           <Item
             {..._character}
+            key={index}
             onclick={() => {
               setCharacter(_character)
               toggleModal()
             }}
-            key={index}
           />
         ))}
 

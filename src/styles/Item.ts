@@ -1,15 +1,11 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
-export const Container = styled.div`
+export const Container = styled(motion.li)`
   position: relative;
   border-radius: 8px;
   max-width: 340px;
-
-  &:hover {
-    border: 2px solid rgba(251, 255, 5, 0.794);
-    cursor: pointer;
-  }
 
   img {
     border-radius: 8px;
