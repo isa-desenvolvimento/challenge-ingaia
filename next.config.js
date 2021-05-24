@@ -6,6 +6,7 @@ module.exports = {
   // basePath: '/challenge-ingaia',
   // assetPrefix: '/challenge-ingaia/',
   images: {
+    deviceSize: [320, 640, 768, 1024],
     domains: ['rickandmortyapi.com']
   }
 }

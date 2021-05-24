@@ -1,14 +1,15 @@
 import { useQuery } from '@apollo/client'
 import { useState } from 'react'
 
-import Item from 'components/Item'
-import Details from 'components/Details'
-import Loading from 'components/Loading'
-import Pagination from 'components/Pagination'
-import NotFoundItem from 'components/NotFoundItem'
-import * as S from 'styles/Card'
+import Item from '../../components/Item'
+import Details from '../../components/Details'
+import Loading from '../../components/Loading'
+import Pagination from '../../components/Pagination'
+import NotFoundItem from '../../components/NotFoundItem'
+import * as S from '../../styles/Card'
 
-import GET_CHARACTERES from 'lib/queries/getCharacteres'
+import GET_CHARACTERES from '../../lib/queries/getCharacteres'
+import { initializeApollo } from '../../lib/apollo'
 
 export default function List({ page, name }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -29,7 +30,7 @@ export default function List({ page, name }) {
 
   return (
     <>
-      <S.Card>
+      <S.Card role="list_container">
         {data.characters.results.map((_character, index) => (
           <Item
             {..._character}
@@ -56,7 +57,17 @@ export default function List({ page, name }) {
 export const getServerSideProps = async ({ query }) => {
   const { name, page } = await query
 
+  const apolloClient = initializeApollo()
+  await apolloClient.query({
+    query: GET_CHARACTERES,
+    variables: { name, page: parseInt(page) }
+  })
+
   return {
-    props: { page: parseInt(page), name }
+    props: {
+      initialApolloState: apolloClient.cache.extract(),
+      page: parseInt(page),
+      name
+    }
   }
 }

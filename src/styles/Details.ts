@@ -24,10 +24,6 @@ export const Container = styled.div`
   @media (max-width: 800px) {
     margin-top: 30%;
     display: list-item;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    box-shadow: inset 0 0 1em #00000080, 0 0 1em #00000080;
-    border-radius: 8px;
 
     img {
       width: 100% !important;
@@ -90,17 +86,7 @@ export const TextContainer = styled.div`
   }
 `
 
-export const Title = styled.h2`
-  color: #cbd736;
-  margin-bottom: 1rem;
-  letter-spacing: 1rem;
-`
-
 export const H1 = styled.h1`
-  color: white;
-`
-
-export const Text = styled.span`
   color: white;
 `
 

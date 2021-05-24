@@ -1,4 +1,4 @@
-import * as S from 'styles/Card'
+import * as S from '../styles/Card'
 import ReactPaginate from 'react-paginate'
 import { useRouter } from 'next/router'
 
@@ -17,7 +17,7 @@ export default function Button({ pageCount }) {
   }
 
   return (
-    <S.ReactPaginateContainer>
+    <S.ReactPaginateContainer role="pagination">
       <ReactPaginate
         previousLabel={'<'}
         nextLabel={'>'}

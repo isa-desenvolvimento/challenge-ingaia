@@ -13,6 +13,7 @@ export type ButtonProps = {
   disabled?: boolean
   type?: 'button' | 'submit' | 'reset'
   theme?: 'none' | 'block'
+  arialLabel: string
 }
 
 export type LinkProps = {
@@ -20,13 +21,34 @@ export type LinkProps = {
   children: ReactNode
 }
 
+// export type ItemsProps = {
+//   name: string
+//   image: string
+//   species: string
+//   status: string
+// }
+
 export type ItemsProps = {
   name: string
   image: string
   species: string
   status: string
+  width?: string
+  height?: string
+  onclick?: () => void
 }
 
 export type CharactersProps = {
   characters: Array<ItemsProps>
+}
+
+export type TitleProps = {
+  text: string
+  role: string
+  arialLabel: string
+  theme?: {
+    color: string
+    letter: string
+    margin: string
+  }
 }
