@@ -5,14 +5,14 @@
 <p align="center">🚀  Sistema para exibição  dos personagens do Rick and Morty.
 </p>
 
-### Telas 
+### :desktop_computer: Telas 
 
 - [x]  Index
 - [x]  Lista de personagem
 - [x]  Detalhes do personagem - modal
 - [x]  Loading
 
-### Telas responsivas 
+### :iphone: Telas responsivas 
 
 - [x]  Index
 - [x]  Lista de personagem
