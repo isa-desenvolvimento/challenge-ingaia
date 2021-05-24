@@ -23,7 +23,7 @@
 
 - [x]  Boas práticas de desenvolvimento;
 - [x]  Padrões de codificação;
-- [ ]  Animações. Várias animações
+- [x]  Animações. Várias animações
 - [x]  Bom uso de HTML5, CSS3 e API do browser
 - [x]  Layout responsivo para outros tamanhos de tela além dos especificados no design
 - [ ]  Navegação por teclado
