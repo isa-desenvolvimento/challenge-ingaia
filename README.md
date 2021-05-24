@@ -18,7 +18,6 @@
 - [x]  Lista de personagem
 - [x]  Detalhes do personagem - modal
 - [x]  Loading
-- [ ]  
 
 ### Features
 
@@ -65,6 +64,9 @@ $ yarn dev
 
 # Execute os testes unitários
 $ yarn test
+
+# Execute os testes integração 
+$ cypress:run
 
 ```
 
